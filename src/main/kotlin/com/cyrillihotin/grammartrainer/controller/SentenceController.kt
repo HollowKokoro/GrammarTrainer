@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam
 @Controller
 class SentenceController(@Autowired val sentence: SentenceServiceImpl) {
 
-    @GetMapping("/1")
+    @GetMapping("/{id}")
     public fun index(@RequestParam id: Int, model: MutableMap<String, Any>): String {
         model["sentence"] = sentence
         return "main"

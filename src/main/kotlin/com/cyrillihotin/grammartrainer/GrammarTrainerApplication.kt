@@ -1,4 +1,4 @@
-package com.cyrillihotin.grammartrainer.application
+package com.cyrillihotin.grammartrainer
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
