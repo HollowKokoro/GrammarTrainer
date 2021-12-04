@@ -8,9 +8,9 @@ data class Sentence(
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private val id: Int,
+    val id: Int,
 
-    private val english: String,
+    val english: String,
 
-    private val russian: String
+    val russian: String
 )
