@@ -1,4 +1,4 @@
-package com.cyrillihotin.grammartrainer.entity
+package com.cyrillihotin.grammartrainer.model
 
 import javax.persistence.*
 

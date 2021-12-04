@@ -1,6 +1,6 @@
 package com.cyrillihotin.grammartrainer.service
 
-import com.cyrillihotin.grammartrainer.entity.Sentence
+import com.cyrillihotin.grammartrainer.model.Sentence
 import com.cyrillihotin.grammartrainer.repository.SentenceRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.findByIdOrNull
