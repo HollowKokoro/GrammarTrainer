@@ -11,16 +11,16 @@ class OptionGenerator(sentence: Sentence) {
     private fun indexOfWord(lexicalCategory: LexicalCategory) = words[lexicalCategories.indexOf(lexicalCategory)]
 
     fun generate(): List<Set<String>?> {
-        val lexicalCategoriesStrings: List<Set<String>?> = lexicalCategories.map {
+        return lexicalCategories.map {
             when(it) {
                 LexicalCategory.VERB ->
                     VerbOptionGenerator(indexOfWord(LexicalCategory.VERB)).generateAll()
                 LexicalCategory.PRONOUN ->
                     PronounOptionGenerator(indexOfWord(LexicalCategory.PRONOUN)).generateAll()
-
+                LexicalCategory.NOUN ->
+                    NounOptionGenerator(indexOfWord(LexicalCategory.NOUN)).generateAll()
                 else -> {null}
             }
         }
-        return lexicalCategoriesStrings
     }
 }

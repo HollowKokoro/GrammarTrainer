@@ -6,6 +6,7 @@ import simplenlg.features.Person
 import simplenlg.features.Tense
 import simplenlg.framework.InflectedWordElement
 import simplenlg.framework.LexicalCategory.VERB
+import simplenlg.framework.NLGElement
 import simplenlg.framework.WordElement
 import simplenlg.lexicon.Lexicon
 import simplenlg.realiser.english.Realiser
@@ -15,7 +16,7 @@ class VerbOptionGenerator(verb: String): PartOfSpeechOptionGenerator {
     override val realised: Realiser = Realiser(lexicon)
     override val word: WordElement = lexicon.getWord(verb, VERB)
 
-    override fun generate(inflected: InflectedWordElement): String = realised.realise(inflected).realisation
+    override fun generate(inflected: NLGElement): String = realised.realise(inflected).realisation
     override fun generateAll(): Set<String> = setOf(
         toPast(),
         toPastParticiple(),

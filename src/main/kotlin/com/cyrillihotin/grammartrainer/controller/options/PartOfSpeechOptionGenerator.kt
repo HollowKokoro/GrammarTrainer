@@ -1,6 +1,6 @@
 package com.cyrillihotin.grammartrainer.controller.options
 
-import simplenlg.framework.InflectedWordElement
+import simplenlg.framework.NLGElement
 import simplenlg.framework.WordElement
 import simplenlg.lexicon.Lexicon
 import simplenlg.realiser.english.Realiser
@@ -10,6 +10,6 @@ interface PartOfSpeechOptionGenerator {
     val realised: Realiser
     val word: WordElement
 
-    fun generate(inflected: InflectedWordElement): String
+    fun generate(inflected: NLGElement): String
     fun generateAll(): Set<String>
 }

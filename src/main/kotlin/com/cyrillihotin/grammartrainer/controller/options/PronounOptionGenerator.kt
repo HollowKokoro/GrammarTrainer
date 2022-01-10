@@ -3,6 +3,7 @@ package com.cyrillihotin.grammartrainer.controller.options
 import simplenlg.features.*
 import simplenlg.framework.InflectedWordElement
 import simplenlg.framework.LexicalCategory
+import simplenlg.framework.NLGElement
 import simplenlg.framework.WordElement
 import simplenlg.lexicon.Lexicon
 import simplenlg.realiser.english.Realiser
@@ -12,7 +13,7 @@ class PronounOptionGenerator(pronoun: String): PartOfSpeechOptionGenerator {
     override val realised: Realiser = Realiser(lexicon)
     override val word: WordElement = lexicon.getWord(pronoun, LexicalCategory.PRONOUN)
 
-    override fun generate(inflected: InflectedWordElement): String = realised.realise(inflected).realisation
+    override fun generate(inflected: NLGElement): String = realised.realise(inflected).realisation
     override fun generateAll(): Set<String> = setOf(
         toSubjectFirstSingular(),
         toSubjectFirstPlural(),
